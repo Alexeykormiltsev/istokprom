@@ -3,6 +3,163 @@
 @import 'reset';
 @import 'global';
 
+.header {
+    &__top {
+        padding: 14px 0;
+        box-shadow: 0px 4px 16px rgba(24, 24, 24, 0.08);
+    }
+
+    &__top-inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        display: block;
+    }
+
+    .menu {
+
+
+        &__box-text {
+            position: relative;
+            @extend %roboto-300;
+            font-size: 12px;
+            line-height: 24px;
+            color: #7C7C7C;
+            margin-bottom: 4px;
+            padding-left: 16px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 12px;
+                height: 12px;
+                background-image: url(../images/icons/pin.svg);
+                left: 0;
+                top: 6px;
+            }
+        }
+
+        &__box-link {
+            @extend %roboto-700;
+            font-size: 12px;
+            line-height: 24px;
+            color: $accent;
+            text-decoration: underline;
+        }
+
+        &__list {
+            display: flex;
+            justify-content: space-between;
+
+        }
+
+        .menu__list-item+.menu__list-item {
+            margin-left: 24px;
+        }
+
+        &__list-link {}
+    }
+
+    .search {
+        max-width: 304px;
+        margin: auto 0;
+        border: 1px solid #C2C2C2;
+        border-radius: 4px;
+
+
+    }
+
+    .form {
+        width: 100%;
+        color: #C2C2C2;
+        font-size: 14px;
+        line-height: 16px;
+        padding: 8px 0;
+
+        input {
+            border: none;
+            font: inherit;
+        }
+    }
+
+    button {
+        background-color: inherit;
+        border: none;
+    }
+
+
+    .contacts {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        span,
+        &__phone,
+        &__email {
+            display: block;
+            text-align: left;
+        }
+
+        &__phone {
+            position: relative;
+            margin-right: 32px;
+            @extend %roboto-400;
+            font-size: 16px;
+            line-height: 20px;
+            color: $blue;
+            padding-left: 32px;
+            margin-top: 5px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background-image: url(../images/icons/phone.svg);
+                left: 0;
+                top: 12px;
+            }
+
+            span {
+                font-size: 14px;
+                line-height: 16px;
+                color: $default;
+                margin-top: 4px;
+            }
+
+
+        }
+
+        &__email {
+            position: relative;
+            @extend %roboto-400;
+            font-size: 16px;
+            line-height: 20px;
+            color: $blue;
+            padding-left: 32px;
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                background-image: url(../images/icons/mail.svg);
+                left: 0;
+                top: 12px;
+            }
+
+            span {
+                font-size: 12px;
+                line-height: 14px;
+                color: #7C7C7C;
+                margin-top: 4px;
+            }
+        }
+    }
+}
+
 
 
 
