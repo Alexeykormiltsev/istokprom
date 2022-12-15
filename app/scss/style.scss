@@ -59,11 +59,15 @@
             margin-left: 24px;
         }
 
-        &__list-link {}
+        &__list-link {
+            &:hover {
+                color: $accent;
+            }
+        }
     }
 
     .search {
-        max-width: 304px;
+        width: 304px;
         margin: auto 0;
         border: 1px solid #C2C2C2;
         border-radius: 4px;
