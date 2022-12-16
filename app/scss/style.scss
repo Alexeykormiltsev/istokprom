@@ -67,7 +67,7 @@
     }
 
     .search {
-        width: 304px;
+        min-width: 304px;
         margin: auto 0;
         border: 1px solid #C2C2C2;
         border-radius: 4px;
@@ -80,17 +80,23 @@
         color: #C2C2C2;
         font-size: 14px;
         line-height: 16px;
-        padding: 8px 0;
+        position: relative;
 
         input {
             border: none;
             font: inherit;
+            padding: 8px 0;
+            width: 100%;
+            padding-left: 32px;  
         }
     }
 
     button {
         background-color: inherit;
-        border: none;
+        border: none !important;
+        position: absolute;
+        top: 6px;
+        left: 4px;
     }
 
 
