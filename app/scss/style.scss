@@ -213,7 +213,10 @@
             width: 448px;
             height: 563px;
         }
+    }
 
+    &__slider-title {
+        margin-bottom: 42px;
     }
 
     &__slider-content {
@@ -276,6 +279,64 @@
                 color: #fff;
                 background-color: $accent;
             }
+        }
+    }
+}
+
+.production {
+    background-color: #F5F9FF;
+    padding: 80px 0;
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .production__item+.production__item {
+        margin-left: 32px;
+    }
+
+    &__item {
+        min-height: 556px;
+        box-shadow: 10px 10px 40px rgba(32, 32, 32, 0.04);
+        border-radius: 16px;
+        width: 33.333%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__img {
+        border-top-right-radius: 16px;
+        border-top-left-radius: 16px;
+        max-width: 100%;
+        margin-bottom: 24px;
+    }
+
+    &__item-title {
+        @extend %manrope-700;
+        color: $blue;
+        font-size: 24px;
+        line-height: 32px;
+        margin: 0 32px 12px;
+    }
+
+    &__item-text {
+        margin: 0 32px 24px;
+    }
+
+    &__item-link {
+        padding: 16px 40px;
+        border: 1px solid #4C70B5;
+        border-radius: 8px;
+        align-items: center;
+        margin: 0 auto;
+        color: $blue;
+        transition: all .3s;
+        text-align: center;
+
+        &:hover {
+        color: #fff;
+        background-color: $blue;
         }
     }
 }
