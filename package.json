@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "-": "^0.0.1",
-    "browser-sync": "^2.27.7"
+    "browser-sync": "^2.27.7",
+    "swiper": "^8.4.5"
   }
 }

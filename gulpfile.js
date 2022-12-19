@@ -27,6 +27,7 @@ function styles() {
 };
 function scripts() {
     return src([
+        'node_modules/swiper/swiper-bundle.js',
         'node_modules/jquery/dist/jquery.js',
         'app/js/main.js'
     ])

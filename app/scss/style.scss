@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+@import 'libs';
 
 .header {
     &__top {
@@ -60,6 +61,8 @@
         }
 
         &__list-link {
+            transition: all .3s;
+
             &:hover {
                 color: $accent;
             }
@@ -72,28 +75,30 @@
         border: 1px solid #C2C2C2;
         border-radius: 4px;
     }
-      .form {
-            width: 100%;
-            color: #C2C2C2;
-            font-size: 14px;
-            line-height: 16px;
-            position: relative;
 
-            input {
-                border: none;
-                font:inherit;
-                padding: 8px 0;
-                width: 100%;
-                padding-left: 32px;
-            }
-            button {
-                background-color: inherit;
-                border: none !important;
-                position: absolute;
-                top: 6px;
-                left: 4px;
-            }
+    .form {
+        width: 100%;
+        color: #C2C2C2;
+        font-size: 14px;
+        line-height: 16px;
+        position: relative;
+
+        input {
+            border: none;
+            font: inherit;
+            padding: 8px 0;
+            width: 100%;
+            padding-left: 32px;
         }
+
+        button {
+            background-color: inherit;
+            border: none !important;
+            position: absolute;
+            top: 6px;
+            left: 4px;
+        }
+    }
 
 
 
@@ -166,13 +171,112 @@
             }
         }
     }
-&__slider{
- padding-top: 38px;
-}
 
-    &__slider-item{
-     display: flex;
-     justify-content: space-between;
+    .slider-container {
+        max-width: 1500px;
+
+    }
+
+    &__slider {
+        padding-top: 38px;
+        padding-bottom: 120px;
+    }
+
+    &__inner {
+        width: 100%;
+    }
+
+    &__slider-item {
+        display: flex !important;
+        justify-content: space-between;
+        position: relative;
+        min-height: 670px;
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 355px;
+            top: 0;
+            background-image: url(../images/slider/after.svg);
+            background-repeat: no-repeat;
+            width: 272px;
+            height: 272px;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            background-image: url(../images/slider/before.svg);
+            background-repeat: no-repeat;
+            width: 448px;
+            height: 563px;
+        }
+
+    }
+
+    &__slider-content {
+        max-width: 680px;
+        padding-left: 120px;
+        padding-top: 80px;
+    }
+
+    &__slider-text {
+        margin-bottom: 24px;
+        font-size: 20px;
+        line-height: 28px;
+    }
+
+
+    &__slider-img {
+        max-width: 100%;
+        object-fit: contain;
+        z-index: 1;
+        display: block;
+    }
+
+    .lotbox {
+        display: flex;
+
+        &__item {
+            margin-bottom: 40px;
+            margin-right: 40px;
+        }
+
+        &__info {
+            font-size: 24px;
+            line-height: 32px;
+            @extend %manrope-700;
+            color: $blue;
+            margin-bottom: 8px;
+
+            span {
+                display: block;
+                font-size: 16px;
+                line-height: 20px;
+                color: $default;
+                @extend %roboto-400;
+            }
+        }
+    }
+
+    .linkbox {
+        display: flex;
+
+        &__link {
+            padding: 16px 40px;
+            border: 1px solid #D44D60;
+            border-radius: 8px;
+            margin-right: 32px;
+            color: $accent;
+            transition: all .3s;
+
+            &:hover {
+                color: #fff;
+                background-color: $accent;
+            }
+        }
     }
 }
 
