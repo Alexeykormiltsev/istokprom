@@ -31,3 +31,35 @@ $blue:#4C70B5;
     font-family: 'Manrope-Regular', sans-serif;
     font-weight: 400;
 }
+
+%btnblue {
+    padding: 16px 40px;
+    border: 1px solid #4C70B5;
+    border-radius: 8px;
+    align-items: center;
+    margin: 0 auto;
+    color: #blue;
+    transition: all .3s;
+    text-align: center;
+
+    &:hover {
+        color: #fff;
+        background-color: $blue;
+    }
+}
+
+%btnred {
+    padding: 16px 40px;
+    border: 1px solid #D44D60;
+    border-radius: 8px;
+    align-items: center;
+    margin: 0 auto;
+    color: $accent;
+    transition: all .3s;
+    text-align: center;
+
+    &:hover {
+        color: #fff;
+        background-color: $accent;
+    }
+}

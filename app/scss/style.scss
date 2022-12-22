@@ -61,7 +61,11 @@
         }
 
         &__list-link {
+            font-size: 14px;
+            line-height: 16px;
             transition: all .3s;
+            color: $default;
+            @extend %roboto-300;
 
             &:hover {
                 color: $accent;
@@ -89,6 +93,12 @@
             padding: 8px 0;
             width: 100%;
             padding-left: 32px;
+
+
+            &:hover {
+                border: 1px solid #4C70B5;
+                transition: all .3s;
+            }
         }
 
         button {
@@ -290,6 +300,7 @@
     &__items {
         display: flex;
         justify-content: space-between;
+
     }
 
     .production__item+.production__item {
@@ -303,6 +314,7 @@
         width: 33.333%;
         display: flex;
         flex-direction: column;
+        background-color: #fff;
     }
 
     &__img {
@@ -335,11 +347,185 @@
         text-align: center;
 
         &:hover {
-        color: #fff;
-        background-color: $blue;
+            color: #fff;
+            background-color: $blue;
         }
     }
 }
+
+.product {
+    padding: 80px 0;
+
+    .swiper-global-container {
+        flex: 1;
+        position: relative;
+        max-width: 1380px;
+        margin: 0 auto;
+    }
+
+    .swiper {
+        max-width: 1230px;
+        margin: 0 auto;
+        position: initial;
+    }
+
+
+    &__slider-items {
+        display: grid !important;
+        grid-gap: 32px;
+        grid-template-columns: repeat(2, 2fr);
+    }
+
+    &__slider-item {
+        display: flex;
+        justify-content: space-between;
+        max-width: 604px;
+        background-color: #F5F9FF;
+    }
+
+    &__slider-img {
+        object-fit: contain;
+    }
+
+    .content {
+        margin: 40px 28px 40px 40px;
+
+        &__title {
+            @extend %manrope-400;
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 20px;
+        }
+
+        &__text {
+            margin-bottom: 20px;
+        }
+
+        &__linkbox {
+            display: flex;
+            justify-content: space-between;
+            padding-right: 24px;
+        }
+
+        &__link {
+            @extend %btnred;
+            padding: 16px 24px;
+            margin: 0;
+        }
+    }
+
+    .swiper-button-next:after,
+    .swiper-container-rtl .swiper-button-prev:after {
+        //content: 'next';
+        display: none;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-container-rtl .swiper-button-next:after {
+        //content: 'prev';
+        display: none;
+    }
+
+
+    .prev {
+        position: absolute;
+        padding: 10px;
+        border: 1px solid #C2C2C2;
+        border-radius: 50%;
+        top: 52%;
+        left: -32px;
+        z-index: 10;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url("../images/slider/prev.svg") no-repeat center;
+        width: 20px;
+        height: 20px;
+
+        &:focus {
+            background-color: $accent;
+            border: none;
+
+            path {
+                stroke: #fff;
+            }
+        }
+    }
+
+    .next {
+        position: absolute;
+        padding: 10px;
+        border: 1px solid #C2C2C2;
+        border-radius: 50%;
+        top: 52%;
+        right: -32px !important;
+        z-index: 10;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url("../images/slider/next.svg") no-repeat center;
+        width: 20px;
+        height: 20px;
+
+        &:focus {
+            background-color: $accent;
+            border: none;
+
+            path {
+                stroke: #fff;
+            }
+        }
+    }
+
+    .swiper-button-prev:after,
+    .swiper-container-rtl .swiper-button-next:after {
+        background: url("../images/slider/prev.svg") no-repeat center;
+        width: 20px;
+        height: 20px;
+        // background-size: 23px 40px;
+        overflow: hidden;
+    }
+
+    .swiper-button-next:after,
+    .swiper-container-rtl .swiper-button-prev:after {
+        background: url("../images/slider/next.svg") no-repeat center;
+        width: 20px;
+        height: 20px;
+        // background-size: 23px 40px;
+        overflow: hidden;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: -48px;
+    }
+
+    .swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 8px;
+    }
+
+
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border: 1px solid #C2C2C2;
+        border-radius: 50%;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $accent;
+        border: none;
+    }
+}
+
+
+
+
+
 
 
 
