@@ -6,10 +6,10 @@ $(function () {
     direction: 'horizontal',
     loop: true,
     autoplay: {
-      delay: 10000,
+      delay: 50000,
     },
   });
-  const slider = new Swiper('.product__slider', {
+  const slider = new Swiper('.product__slider, .example__slider', {
 
     // Optional parameters
     direction: 'horizontal',

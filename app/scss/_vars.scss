@@ -63,3 +63,105 @@ $blue:#4C70B5;
         background-color: $accent;
     }
 }
+
+%slider {
+
+    .swiper-button-next:after,
+    .swiper-container-rtl .swiper-button-prev:after {
+        //content: 'next';
+        display: none;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-container-rtl .swiper-button-next:after {
+        //content: 'prev';
+        display: none;
+    }
+
+
+    .prev {
+        position: absolute;
+        padding: 10px;
+        border: 1px solid #C2C2C2;
+        border-radius: 50%;
+        top: 52%;
+        left: -32px;
+        z-index: 10;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url("../images/slider/prev.svg") no-repeat center;
+        width: 20px;
+        height: 20px;
+
+        &:focus {
+            background-color: $accent;
+            border: none;
+        }
+    }
+
+    .next {
+        position: absolute;
+        padding: 10px;
+        border: 1px solid #C2C2C2;
+        border-radius: 50%;
+        top: 52%;
+        right: -32px !important;
+        z-index: 10;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: url("../images/slider/next.svg") no-repeat center;
+        width: 20px;
+        height: 20px;
+
+        &:focus {
+            background-color: $accent;
+            border: none;
+        }
+    }
+
+    .swiper-button-prev:after,
+    .swiper-container-rtl .swiper-button-next:after {
+        background: url("../images/slider/prev.svg") no-repeat center;
+        width: 20px;
+        height: 20px;
+        // background-size: 23px 40px;
+        overflow: hidden;
+    }
+
+    .swiper-button-next:after,
+    .swiper-container-rtl .swiper-button-prev:after {
+        background: url("../images/slider/next.svg") no-repeat center;
+        width: 20px;
+        height: 20px;
+        // background-size: 23px 40px;
+        overflow: hidden;
+    }
+
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: -48px;
+    }
+
+    .swiper-pagination-bullets .swiper-pagination-bullet,
+    .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+        margin: 0 8px;
+    }
+
+
+    .swiper-pagination-bullet {
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border: 1px solid #C2C2C2;
+        border-radius: 50%;
+    }
+
+    .swiper-pagination-bullet-active {
+        background-color: $accent;
+        border: none;
+    }
+}
