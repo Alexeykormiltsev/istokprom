@@ -6,7 +6,7 @@ $(function () {
     direction: 'horizontal',
     loop: true,
     autoplay: {
-      delay: 50000,
+      delay: 5000,
     },
   });
   const slider = new Swiper('.product__slider, .example__slider', {
@@ -15,7 +15,7 @@ $(function () {
     direction: 'horizontal',
     loop: true,
     autoplay: {
-      delay: 50000,
+      delay: 5000,
     },
     pagination: true,
     navigation: true,

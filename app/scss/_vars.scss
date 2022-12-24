@@ -38,7 +38,7 @@ $blue:#4C70B5;
     border-radius: 8px;
     align-items: center;
     margin: 0 auto;
-    color: #blue;
+    color: $blue;
     transition: all .3s;
     text-align: center;
 
@@ -81,11 +81,11 @@ $blue:#4C70B5;
 
     .prev {
         position: absolute;
-        padding: 10px;
+        padding: 20px;
         border: 1px solid #C2C2C2;
         border-radius: 50%;
-        top: 52%;
-        left: -32px;
+        top: 50%;
+        left: -60px;
         z-index: 10;
         cursor: pointer;
         display: flex;
@@ -103,11 +103,11 @@ $blue:#4C70B5;
 
     .next {
         position: absolute;
-        padding: 10px;
+        padding: 20px;
         border: 1px solid #C2C2C2;
         border-radius: 50%;
-        top: 52%;
-        right: -32px !important;
+        top: 50%;
+        right: -60px;
         z-index: 10;
         cursor: pointer;
         display: flex;
