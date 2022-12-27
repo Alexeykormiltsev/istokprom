@@ -32,6 +32,7 @@ $blue:#4C70B5;
     font-weight: 400;
 }
 
+
 %btnblue {
     padding: 16px 40px;
     border: 1px solid #4C70B5;
@@ -99,6 +100,12 @@ $blue:#4C70B5;
             background-color: $accent;
             border: none;
         }
+
+        &:hover {
+            background-color: #fff;
+            border: 1px solid #D44D60;
+            ;
+        }
     }
 
     .next {
@@ -120,6 +127,12 @@ $blue:#4C70B5;
         &:focus {
             background-color: $accent;
             border: none;
+        }
+
+        &:hover {
+            background-color: #fff;
+            border: 1px solid #D44D60;
+            ;
         }
     }
 

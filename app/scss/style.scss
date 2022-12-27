@@ -192,11 +192,6 @@
         }
     }
 
-    .slider-container {
-        // max-width: 1500px;
-
-    }
-
     &__slider {
         padding-top: 38px;
         padding-bottom: 120px;
@@ -288,15 +283,21 @@
             padding: 16px 38px;
             border: 1px solid #D44D60;
             border-radius: 8px;
-            margin-right: 32px;
+            align-items: center;
             color: $accent;
             transition: all .3s;
+            text-align: center;
+            margin-right: 32px;
 
-            &:hover {
+             &:hover {
                 color: #fff;
                 background-color: $accent;
+
             }
+        
+            
         }
+
     }
 }
 
@@ -627,8 +628,9 @@
             .client__content {
                 color: #fff;
             }
-            .client__content-title{
-             margin-bottom: 20px;
+
+            .client__content-title {
+                margin-bottom: 20px;
             }
 
             .client__link {
@@ -646,6 +648,7 @@
             .client__img {
                 margin-top: 20px;
                 margin-right: 20px;
+                object-fit: cover;
             }
         }
     }
@@ -672,7 +675,151 @@
         border-top-right-radius: 16px;
         border-bottom-right-radius: 16px;
     }
+}
 
+.customers {
+    padding: 40px 0 80px;
+    @extend %slider;
+
+    .swiper {
+        max-width: 1230px;
+        margin: 0 auto;
+        position: initial;
+    }
+
+    &__slider-items {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-gap: 12px;
+        padding: 32px 0;
+        background-color: #FFFFFF;
+        box-shadow: 10px 10px 40px rgba(32, 32, 32, 0.04);
+        border-radius: 16px;
+        min-height: 292px;
+    }
+}
+
+.comments {
+    padding: 80px 0;
+    background-color: #F5F9FF;
+    @extend %slider;
+
+    .swiper {
+        max-width: 1230px;
+        margin: 0 auto;
+        position: initial;
+    }
+
+    &__slider-items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 32px;
+        min-height: 368px;
+    }
+
+    &__slider-item {
+        display: flex;
+        justify-content: space-between;
+        padding: 18px;
+        padding-bottom: 24px;
+        background-color: #FFF;
+        box-shadow: 10px 10px 40px rgba(32, 32, 32, 0.04);
+        border-radius: 16px;
+    }
+
+    &__img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        margin-right: 16px;
+    }
+
+    .box {
+        position: relative;
+
+        &__name {
+            @extend %manrope-700;
+            color: $blue;
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 8px;
+        }
+
+        &__post {
+            display: block;
+            font-size: 16px;
+            line-height: 24px;
+            color: $default;
+        }
+
+        &__date {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        &__text {
+            // margin-bottom: 16px;
+        }
+
+        &__link {
+            display: block;
+            position: absolute;
+            color: $blue;
+            bottom: 0;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        details,
+        summary {
+            display: inline;
+        }
+
+        details[open] {
+            display: contents;
+        }
+
+        details[open]::after {
+            display: block;
+            content: "000";
+            opacity: 0;
+        }
+
+        summary {
+            color: $default;
+            cursor: pointer;
+            transition: all 1s;
+        }
+
+        details[open] summary {
+            position: absolute;
+            bottom: -38px;
+            right: 0;
+            margin-bottom: 20px;
+        }
+
+        summary::before {
+            content: " Показать весь текст";
+            position: absolute;
+            bottom: 42px;
+            right: 42px;
+            font-size: 16px;
+            line-height: 24px;
+            color: $default;
+            text-decoration: underline;
+        }
+
+        details[open] summary::before {
+            content: "Свернуть";
+            color: $accent;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+    }
 }
 
 
