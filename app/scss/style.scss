@@ -289,13 +289,13 @@
             text-align: center;
             margin-right: 32px;
 
-             &:hover {
+            &:hover {
                 color: #fff;
                 background-color: $accent;
 
             }
-        
-            
+
+
         }
 
     }
@@ -725,6 +725,7 @@
         background-color: #FFF;
         box-shadow: 10px 10px 40px rgba(32, 32, 32, 0.04);
         border-radius: 16px;
+        max-width: 368px;
     }
 
     &__img {
@@ -790,13 +791,13 @@
         summary {
             color: $default;
             cursor: pointer;
-            transition: all 1s;
+            transition: all 1.5s;
         }
 
         details[open] summary {
             position: absolute;
             bottom: -38px;
-            right: 0;
+            right: -12px;
             margin-bottom: 20px;
         }
 
@@ -812,13 +813,105 @@
         }
 
         details[open] summary::before {
-            content: "Свернуть";
+            content: "ЗАКРЫТЬ";
             color: $accent;
+            font-size: 12px;
+            line-height: 18px;
+            padding: 0 8px;
+            font-weight: 700;
+            text-decoration: none;
         }
 
         summary::-webkit-details-marker {
             display: none;
         }
+    }
+
+    &__form {
+        margin-top: 120px;
+        display: flex;
+        height: 610px;
+        width: 100%;
+        background-color: #fff;
+
+    }
+
+    &__form-title {
+        margin-bottom: 20px;
+    }
+
+    &__form-box {
+        padding: 40px 0 0 40px;
+    }
+
+    &__form-text {
+        margin-bottom: 24px;
+    }
+
+    &__form-label {
+        display: block;
+        margin-bottom: 24px;
+        width: 100%;
+    }
+
+    &__form-input {
+        display: block;
+        width: 100%;
+        border: 1px solid #C2C2C2;
+        border-radius: 4px;
+        color: #C2C2C2;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        padding-left: 12px;
+        cursor: pointer;
+
+    }
+
+    &__form-checkbox {
+        display: block;
+        width: 100%;
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 24px;
+        position: relative;
+
+        .checkbox-link {
+            display: inline-block;
+            font-size: 12px;
+            line-height: 20px;
+
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            .checkbox {
+                display: block;
+                position: absolute !important;
+                bottom: 0;
+                width: 16px;
+                height: 16px;
+            }
+        }
+    }
+
+    &__form-btn {
+        display: block;
+        color: #fff;
+        background-color: $accent;
+        border-radius: 8px;
+        cursor: pointer;
+        border: none;
+        font-size: 16px;
+        line-height: 20px;
+        padding: 14px 40px;
+
+        &:hover {
+            color: $accent;
+            background-color: #fff;
+            border: 1px solid #D44D60;
+        }
+
     }
 }
 
