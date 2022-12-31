@@ -829,6 +829,7 @@
 
     &__form {
         margin-top: 120px;
+        padding-bottom: 80px;
         display: flex;
         height: 610px;
         width: 100%;
@@ -864,7 +865,6 @@
         padding-bottom: 16px;
         padding-left: 12px;
         cursor: pointer;
-
     }
 
     &__form-checkbox {
@@ -905,14 +905,204 @@
         font-size: 16px;
         line-height: 20px;
         padding: 14px 40px;
+        transition: all .3s;
 
         &:hover {
             color: $accent;
             background-color: #fff;
             border: 1px solid #D44D60;
         }
-
     }
+}
+
+.footer {
+    background-color: #EDEFF3;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 244px;
+        height: 244px;
+        background-image: url(../images/triangle.png);
+        background-repeat: no-repeat;
+        bottom: -154px;
+        right: 50%;
+    }
+
+
+    &__list {
+        display: flex;
+        // justify-content: space-between;
+        padding: 64px 0 64px 0;
+    }
+
+    &__logo {
+        margin: 24px 80px 24px 0;
+    }
+
+    &__img {
+        max-width: 119px;
+        height: 168px;
+    }
+
+    &__items {
+        margin-right: 80px;
+    }
+
+    // .footer__items+.footer__items {
+    //     margin-left: 80px;
+    // }
+
+    &__copy {
+        @extend %roboto-700;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 16px;
+        min-width: 280px;
+    }
+
+    &__contacts {
+        padding-left: 32px;
+    }
+
+    &__contacts-email {
+        color: $blue;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/icons/mail.svg);
+            left: -32px;
+            top: 12px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__contacts-phone {
+        color: $blue;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/icons/phone.svg);
+            left: -32px;
+            top: 8px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    span {
+        display: block;
+        font-size: 12px;
+        line-height: 14px;
+        color: #7C7C7C;
+        margin-bottom: 16px;
+        margin-top: 4px;
+    }
+
+    &__contacts-adress {
+        color: $blue;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-image: url(../images/icons/adress.svg);
+            left: -32px;
+            top: 8px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .nav {
+        padding: 20px 0;
+        min-width: 210px;
+
+        &__item {
+            margin-bottom: 16px;
+        }
+
+        &__link {
+            font-size: 14px;
+            line-height: 16px;
+            @extend %roboto-300;
+            color: $default;
+            transition: all .3s;
+
+            &:hover {
+                color: $accent;
+            }
+        }
+    }
+
+    .form {
+        width: 304px;
+
+        &__title {
+            font-size: 20px;
+            line-height: 32px;
+            @extend %manrope-700;
+            margin-bottom: 8px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 20px;
+            color: #7C7C7C;
+            margin-bottom: 16px;
+        }
+
+        &__label {}
+
+        &__input {
+            width: 100%;
+            padding: 16px 0 16px 12px;
+            display: block;
+            margin-bottom: 16px;
+            min-width: 304px;
+            background-color: #FFFFFF;
+            border: 1px solid #C2C2C2;
+            border-radius: 4px;
+        }
+
+        &__btn {
+            display: block;
+            color: #fff;
+            background-color: $accent;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            line-height: 20px;
+            padding: 14px 40px;
+            transition: all .3s;
+
+            &:hover {
+                color: $accent;
+                background-color: #fff;
+                border: 1px solid #D44D60;
+            }
+        }
+    }
+
 }
 
 
