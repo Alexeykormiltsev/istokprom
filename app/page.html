@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>studio-istokprom</title>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="container">
+                <div class="header__top-inner">
+                    <a class="logo" href="#">
+                        <svg width="37" height="52" viewBox="0 0 37 52" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <rect width="37" height="52" fill="url(#pattern0)" />
+                            <defs>
+                                <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                    <use xlink:href="#image0_1409_189"
+                                        transform="translate(0 -0.00970784) scale(0.00961538 0.00684172)" />
+                                </pattern>
+                                <image id="image0_1409_189" width="104" height="149"
+                                    xlink:href="data:image/png;base64,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" />
+                            </defs>
+                        </svg>
+                    </a>
+                    <nav class="menu">
+                        <div class="menu__box">
+                            <p class="menu__box-text">
+                                Производство машинной вышивки в
+                                <span>
+                                    <a class="menu__box-link" href="https://ivgoradm.ru/mainPage" target="_blank">
+                                        Иваново
+                                    </a>
+                                </span>
+                            </p>
+                            <ul class="menu__list">
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">
+                                        О компании
+                                    </a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">
+                                        Наши услуги
+                                    </a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">
+                                        Цены
+                                    </a>
+                                </li>
+                                <li class="menu__list-item">
+                                    <a class="menu__list-link" href="#">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="search">
+                        <form class="form">
+                            <button class="" type="submit">
+                                <img src="images/icons/search_1.svg" alt="search img">
+                            </button>
+                            <input type="text" placeholder="Поиск">
+                        </form>
+                    </div>
+                    <div class="contacts">
+                        <a class="contacts__phone" href="tel:+74932930998">
+                            Заказать вышивку
+                            <span>+7 (4932) 930-998</span>
+                        </a>
+
+                        <a class="contacts__email" href="mailto:1p@istokprom.ru">1p@istokprom.ru
+                            <span>
+                                график работы с 9:00 до 17:00 <br>
+                                понедельник-пятница
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__slider">
+            <div class="container slider-container">
+                <div class="header__slider-inner swiper">
+                    <div class="swiper-wrapper">
+                        <div class="header__slider-item swiper-slide">
+                            <div class="header__slider-content">
+                                <h1 class="header__slider-title">
+                                    Производство <br> машинной вышивки любой сложности
+                                </h1>
+                                <p class="header__slider-text">
+                                    На производстве мы используем 10 универсальных вышивальных машин данной серии. Они
+                                    предназначены для вышивки на готовых изделиях и элементах кроя, полотнах и головных
+                                    уборах.
+                                </p>
+                                <div class="lotbox">
+                                    <div class="lotbox__item">
+                                        <div class="lotbox__info">
+                                            От 50 шт.
+                                            <span class="lotbox__lot">
+                                                Малые партии
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="lotbox__item">
+                                        <div class="lotbox__info">
+                                            20 000 - 50 000 шт.
+                                            <span class="lotbox__lot">
+                                                Большие партии
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="linkbox">
+                                    <a class="linkbox__link" href="#">
+                                        Наши услуги
+                                    </a>
+                                    <a class="linkbox__link" href="#">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                            <img class="header__slider-img" src="images/slider/2.png" alt="slider img">
+                        </div>
+
+                        <div class="header__slider-item  swiper-slide">
+                            <div class="header__slider-content">
+                                <h1 class="header__slider-title">
+                                    Производство <br> машинной вышивки любой сложности
+                                </h1>
+                                <p class="header__slider-text">
+                                    На производстве мы используем 10 универсальных вышивальных машин данной серии.
+                                    Они
+                                    предназначены для вышивки на готовых изделиях и элементах кроя, полотнах и
+                                    головных
+                                    уборах.
+                                </p>
+                                <div class="lotbox">
+                                    <div class="lotbox__item">
+                                        <div class="lotbox__info">
+                                            От 50 шт.
+                                            <span class="lotbox__lot">
+                                                Малые партии
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="lotbox__item">
+                                        <div class="lotbox__info">
+                                            20 000 - 50 000 шт.
+                                            <span class="lotbox__lot">
+                                                Большие партии
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="linkbox">
+                                    <a class="linkbox__link" href="#">
+                                        Наши услуги
+                                    </a>
+                                    <a class="linkbox__link" href="#">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+
+                            <img class="header__slider-img" src="images/slider/2.png" alt="slider img">
+                        </div>
+                        <div class="header__slider-item  swiper-slide">
+                            <div class="header__slider-content">
+                                <h1 class="header__slider-title">
+                                    Производство <br> машинной вышивки любой сложности
+                                </h1>
+                                <p class="header__slider-text">
+                                    На производстве мы используем 10 универсальных вышивальных машин данной серии.
+                                    Они
+                                    предназначены для вышивки на готовых изделиях и элементах кроя, полотнах и
+                                    головных
+                                    уборах.
+                                </p>
+                                <div class="lotbox">
+                                    <div class="lotbox__item">
+                                        <div class="lotbox__info">
+                                            От 50 шт.
+                                            <span class="lotbox__lot">
+                                                Малые партии
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="lotbox__item">
+                                        <div class="lotbox__info">
+                                            20 000 - 50 000 шт.
+                                            <span class="lotbox__lot">
+                                                Большие партии
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="linkbox">
+                                    <a class="linkbox__link" href="#">
+                                        Наши услуги
+                                    </a>
+                                    <a class="linkbox__link" href="#">
+                                        Подробнее
+                                    </a>
+                                </div>
+                            </div>
+                            <img class="header__slider-img" src="images/slider/2.png" alt="slider img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+   
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__list">
+                <a class="footer__logo" href="#">
+                    <img class="footer__img" src="images/logo 2.png" alt="logo">
+                </a>
+                <div class="footer__items">
+                    <div class="footer__copy">
+                        © ООО “Студия Исток-Пром”, 2018- 2022
+                    </div>
+                    <div class="footer__contacts">
+                        <a class="footer__contacts-email" href="mailto:1p@istokprom.ru">
+                            1p@istokprom.ru
+                        </a>
+                        <span>график работы с 9:00 до 17:00
+                            понедельник-пятница</span>
+                        <a class="footer__contacts-phone" href="tel:+74932930998">
+                            Заказать вышивку
+                        </a>
+                        <span>+7 (4932) 930-998</span>
+                        <a class="footer__contacts-adress" href="#">
+                            г. Иваново, ул. Маршала Жаворонкова, 9
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__items nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">
+                                Портфолио
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">
+                                Доставка и оплата
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">
+                                Политика конфиденциальности
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">
+                                Пользовательское соглашение
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">
+                                Договор оферты
+                            </a>
+                        </li>
+                        <li class="nav__item">
+                            <a class="nav__link" href="#">
+                                Гарантии
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__items form">
+                    <h4 class="form__title">
+                        Остались вопросы?
+                    </h4>
+                    <p class="form__text">
+                        Введите номер телефона. Менеджер свяжется с вами в ближайшее время
+                    </p>
+                    <label class="form__label">
+                        <input class="form__input" type="text" placeholder="Ваш телефон">
+                    </label>
+                    <button class="form__btn" type="submit">
+                        Отправить
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.min.js"></script>
+</body>
+
+</html>

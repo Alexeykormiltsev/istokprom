@@ -1,6 +1,11 @@
 
 
 $(function () {
+
+  $('.menu__btn').on('click', function () {
+    $('.menu__box').toggleClass('menu__box--active');
+  });
+
   const swiper = new Swiper('.header__slider-inner', {
     // Optional parameters
     direction: 'horizontal',

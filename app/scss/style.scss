@@ -26,6 +26,9 @@
 
     .menu {
 
+        &__btn {
+            display: none;
+        }
 
         &__box-text {
             position: relative;
@@ -126,7 +129,6 @@
     .contacts {
         display: flex;
         justify-content: space-between;
-        flex-wrap: wrap;
 
         span,
         &__phone,
@@ -1105,13 +1107,105 @@
 
 }
 
+@media (max-width:1150px) {
+    .search {
+        display: none;
+    }
+}
 
+@media (max-width:860px) {
+    .header {
 
+        .menu {
+            order: 1;
 
+            &__btn {
+                display: block;
+                width: 30px;
+                height: 30px;
+                border: none;
+                padding: 0;
+                background-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                cursor: pointer;
+                margin-right: 20px;
+                margin-left: auto;
+                margin-top: 16px;
 
+                span {
+                    width: 22px;
+                    height: 4px;
+                    background-color: $blue;
+                    border-radius: 16px;
+                }
+            }
 
+            .menu__btn::after,
+            .menu__btn::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 4px;
+                background-color: $blue;
+                right: 3px;
+                border-radius: 16px;
+            }
 
+            .menu__btn::after {
+                bottom: 0;
+            }
 
+            .menu__btn::before {
+                top: 0;
+            }
 
+            &__box {
+                transform: translateX(500%);
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                text-align: center;
+                transition: all .5s;
+            }
 
-@import 'media';
+            &__box-text {
+                display: none;
+            }
+
+            &__list {
+                flex-direction: column;
+                align-items: center;
+                z-index: 5;
+                background-color: #E5E5E5;
+
+            }
+
+            .menu__box--active {
+                transform: translateY(0);
+            }
+
+            .menu__list-item+.menu__list-item {
+                margin-left: 0;
+            }
+
+            &__list-item {
+                margin-bottom: 16px;
+            }
+        }
+
+        .contacts {
+            margin-left: 40px;
+        }
+    }
+}
+@media (max-width:600px){
+ .header{
+   .contacts {
+            display: none;
+        }
+ }
+}
