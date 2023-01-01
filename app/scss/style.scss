@@ -1378,7 +1378,10 @@
         .contacts {
             display: none;
         }
-
+&__slider-item{
+ height: auto;
+ min-height: 400px;
+}
         &__slider-title {
             font-size: 28px;
             line-height: 38px;
@@ -1393,7 +1396,7 @@
 
         .lotbox {
             justify-content: space-between;
-            margin-bottom: 34px;
+            margin-bottom: 0;
 
             &__info {
                 font-size: 18px;
