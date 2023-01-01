@@ -267,11 +267,6 @@
         display: block;
     }
 
-    &__slider-img3 {
-        object-fit: cover;
-        background-position: center bottom;
-    }
-
     .lotbox {
         display: flex;
 
@@ -1164,11 +1159,7 @@
     }
 
     .header {
-        .linkbox-off {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      
 
         .swiper {
             margin: 0;
@@ -1311,7 +1302,6 @@
 
 @media (max-width:600px) {
     .header {
-
         .contacts {
             display: none;
         }
@@ -1350,10 +1340,10 @@
         }
 
         &__slider-item {
-margin: auto 0;
+
             &::after {
                 background-image: url(../images/slider/after.png);
-                top: 24px;
+                top: 190px;
                 left: 10px;
                 width: 128px;
                 height: 128px;
@@ -1363,7 +1353,7 @@ margin: auto 0;
                 background-image: url(../images/slider/before.png);
                 width: 210px;
                 height: 210px;
-                bottom: 340px;
+                bottom: 100px;
                 right: 0;
             }
         }

@@ -11,7 +11,7 @@ $(function () {
     direction: 'horizontal',
     loop: true,
     autoplay: {
-      delay: 10000000,
+      delay: 7000,
     },
     effect: 'flip',
     flipEffect: {
