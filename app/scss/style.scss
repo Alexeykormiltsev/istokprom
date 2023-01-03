@@ -1320,6 +1320,10 @@
     }
 
     .header {
+        &__top {
+            position: initial;
+        }
+
         .menu {
             order: 1;
 
@@ -1471,8 +1475,8 @@
         }
 
         .content {
-            width: auto;
-            min-width: 220px;
+            // width: auto;
+            // min-width: 220px;
 
             &__title {
                 font-size: 24px;
@@ -1589,10 +1593,10 @@
 
 @media (max-width:460px) {
     .swiper-global-container {
-        max-width: 300px;
+        max-width: 330px;
 
         .container {
-            max-width: 308px;
+            max-width: 320px;
         }
     }
 
@@ -1638,12 +1642,12 @@
             padding: 12px;
         }
 
-        .prev {
-            left: 0;
-        }
+        // .prev {
+        //     left: 0;
+        // }
 
-        .next {
-            right: -15px;
-        }
+        // .next {
+        //     right: -15px;
+        // }
     }
 }
