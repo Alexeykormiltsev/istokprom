@@ -1272,8 +1272,9 @@
             &__wrapper {
                 flex-direction: column;
             }
-            &__content{
-             padding: 24px 16px;
+
+            &__content {
+                padding: 24px 16px;
             }
 
             &__video {
@@ -1284,11 +1285,13 @@
                 border-top-right-radius: 16px;
                 border-bottom-left-radius: 0;
             }
-            &__text-bottom{
-             margin-bottom: 24px;
+
+            &__text-bottom {
+                margin-bottom: 24px;
             }
-            &__link{
-             display: block;
+
+            &__link {
+                display: block;
             }
         }
     }
@@ -1351,7 +1354,7 @@
             }
 
             &__box {
-                transform: translateX(500%);
+                transform: translateY(-500%);
                 position: absolute;
                 top: 80px;
                 left: 0;
@@ -1463,7 +1466,12 @@
                 line-height: 32px;
             }
         }
+    }
 
+    .product,
+    .example,
+    .comments,
+    .customers {
         .prev {
             left: -15px;
             padding: 16px;
@@ -1482,8 +1490,12 @@
     }
 
     .example {
+    .prev,
+    .next{
+     top: 43%;
+    }
         &__slider {
-            min-height: 786px;
+            min-height: 720px;
             height: auto;
         }
 
@@ -1639,12 +1651,26 @@
             height: 310px;
         }
     }
+
+    .example {
+        .demonstration {
+            &__video {
+                min-width: 288px;
+                min-height: 240px;
+            }
+        }
+    }
     .example{
-     .demonstration{
-      &__video{
-       min-width: 288px;
-       min-height: 240px;
-      }
+     &__slider-items{
+      grid-template-rows: 216px 216px 216px;
+     }
+     &__slider-minimg,
+     .min,{
+      height: 216px;
+     }
+       .content{
+      height: auto;
+      min-height: 216px;
      }
     }
 }
@@ -1707,7 +1733,9 @@
     }
 
     .product,
-    .example {
+    .example,
+    .comments,
+    .customers {
         .swiper-pagination-bullet {
             width: 12px;
             height: 12px;
