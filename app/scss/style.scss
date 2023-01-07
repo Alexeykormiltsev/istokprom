@@ -651,12 +651,14 @@
                 transition: all .3s;
                 text-align: center;
                 background-color: #fff;
+                font-size: 14px;
+                line-height: 20px;
             }
 
             .client__img {
-                margin-top: 20px;
+                width: 36%;
                 margin-right: 20px;
-                object-fit: cover;
+                object-fit: contain;
             }
         }
     }
@@ -682,6 +684,7 @@
     &__img {
         border-top-right-radius: 16px;
         border-bottom-right-radius: 16px;
+        width: 30%;
     }
 }
 
@@ -1322,6 +1325,32 @@
             }
         }
     }
+
+    .client {
+        &__content {
+            padding: 26px;
+        }
+
+        &__content-title {
+            font-size: 28px;
+            line-height: 34px;
+        }
+
+        &__content-text {
+            line-height: 22px;
+        }
+
+        .order {
+            .client__content-title {
+                font-size: 32px;
+                line-height: 40px;
+            }
+
+            .client__img {
+                width: 30%;
+            }
+        }
+    }
 }
 
 @media (max-width:860px) {
@@ -1581,6 +1610,36 @@
             object-fit: unset;
         }
     }
+
+    .client {
+        &__wrapper {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 16px;
+        }
+
+        .order {
+            flex-direction: column;
+            align-items: center;
+            min-height: 280px;
+            height: auto;
+
+            .client__content {
+                margin-bottom: 16px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .client__img {
+                width: 100%;
+                padding: 0 60px;
+                margin-right: 0;
+            }
+
+            .client__link {
+                width: 100%;
+            }
+        }
+    }
 }
 
 @media (max-width:680px) {
@@ -1740,6 +1799,21 @@
             min-height: 216px;
         }
     }
+
+    .client {
+        padding: 40px 0;
+
+        &__content-title {
+            font-size: 22px;
+            line-height: 28px;
+            margin-bottom: 8px;
+        }
+
+        &__content-text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
 }
 
 @media (max-width:460px) {
@@ -1811,6 +1885,28 @@
         .prev,
         .next {
             padding: 12px;
+        }
+    }
+
+    .client {
+        &__content {
+            padding: 16px;
+        }
+
+        &__content-title {
+            font-size: 20px;
+            line-height: 24px;
+            margin-bottom: 8px;
+        }
+
+        &__content-text {
+            font-size: 12px;
+            line-height: 16px;
+        }
+        .order{
+         .client__content{
+          margin-bottom: 0;
+         }
         }
     }
 }
