@@ -1243,8 +1243,6 @@
     }
 
     .header {
-
-
         .swiper {
             margin: 0;
         }
@@ -1292,6 +1290,35 @@
 
             &__link {
                 display: block;
+            }
+        }
+    }
+
+    .stages {
+
+        &__inner {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+        &__link {
+            grid-column: span 2;
+        }
+
+        .center {
+            &::after {
+                content: none;
+            }
+
+            &::before {
+                content: none;
+            }
+        }
+
+        .before {
+
+            &::before {
+                content: none;
             }
         }
     }
@@ -1490,10 +1517,12 @@
     }
 
     .example {
-    .prev,
-    .next{
-     top: 43%;
-    }
+
+        .prev,
+        .next {
+            top: 43%;
+        }
+
         &__slider {
             min-height: 720px;
             height: auto;
@@ -1551,7 +1580,6 @@
             grid-column: span 4;
             object-fit: unset;
         }
-
     }
 }
 
@@ -1577,6 +1605,41 @@
 
         &__item-title {
             font-size: 20px;
+            line-height: 24px;
+        }
+    }
+
+    .stages {
+        padding-bottom: 40px;
+
+        &__inner {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 20px;
+        }
+
+        &__link {
+            grid-column: span 1;
+        }
+
+        #cart+#cart {
+            padding: 20px 16px;
+            align-items: center;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 2px;
+                height: 20px;
+                background-color: #4c70b5;
+                top: -20px;
+                right: 50%;
+                left: 50%;
+            }
+        }
+
+        &__process {
+            font-size: 16px;
             line-height: 24px;
         }
     }
@@ -1660,18 +1723,22 @@
             }
         }
     }
-    .example{
-     &__slider-items{
-      grid-template-rows: 216px 216px 216px;
-     }
-     &__slider-minimg,
-     .min,{
-      height: 216px;
-     }
-       .content{
-      height: auto;
-      min-height: 216px;
-     }
+
+    .example {
+        &__slider-items {
+            grid-template-rows: 216px 216px 216px;
+        }
+
+        &__slider-minimg,
+        .min,
+            {
+            height: 216px;
+        }
+
+        .content {
+            height: auto;
+            min-height: 216px;
+        }
     }
 }
 
