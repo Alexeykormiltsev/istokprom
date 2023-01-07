@@ -706,7 +706,7 @@
         background-color: #FFFFFF;
         box-shadow: 10px 10px 40px rgba(32, 32, 32, 0.04);
         border-radius: 16px;
-        min-height: 292px;
+        // min-height: 292px;
     }
 }
 
@@ -1701,6 +1701,9 @@
             font-size: 16px;
             line-height: 24px;
         }
+    }
+    .customers{
+     padding: 20px 0 40px;
     }
 }
 
