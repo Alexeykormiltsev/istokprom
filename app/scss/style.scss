@@ -747,7 +747,6 @@
     }
 
     .box {
-        position: relative;
 
         &__name {
             @extend %manrope-700;
@@ -768,72 +767,17 @@
             display: block;
             margin-bottom: 8px;
         }
+           &__text {
+                margin-bottom: 16px;
+            }
 
         &__link {
             display: block;
-            position: absolute;
             color: $blue;
-            bottom: 0;
 
             &:hover {
                 text-decoration: underline;
             }
-            &__text{
-             padding-bottom: 12px;
-            }
-        }
-
-        details,
-        summary {
-            display: inline;
-        }
-
-        details[open] {
-            display: contents;
-        }
-
-        details[open]::after {
-            display: block;
-            content: "000";
-            opacity: 0;
-        }
-
-        summary {
-            color: $default;
-            cursor: pointer;
-            transition: all 1.5s;
-        }
-
-        details[open] summary {
-            position: absolute;
-            bottom: -38px;
-            right: -12px;
-            margin-bottom: 20px;
-        }
-
-        summary::before {
-            content: " Показать весь текст";
-            position: absolute;
-            bottom: 31px;
-            right: 42px;
-            font-size: 14px;
-            line-height: 20px;
-            color: $default;
-            text-decoration: underline;
-        }
-
-        details[open] summary::before {
-            content: "ЗАКРЫТЬ";
-            color: $accent;
-            font-size: 12px;
-            line-height: 18px;
-            padding: 0 8px;
-            font-weight: 700;
-            text-decoration: none;
-        }
-
-        summary::-webkit-details-marker {
-            display: none;
         }
     }
 
@@ -841,7 +785,6 @@
         margin-top: 120px;
         padding-bottom: 80px;
         display: flex;
-        height: 610px;
         width: 100%;
         background-color: #fff;
         border-radius: 16px;
@@ -1113,5 +1056,5 @@
         }
     }
 }
-@import 'media';
 
+@import 'media';
