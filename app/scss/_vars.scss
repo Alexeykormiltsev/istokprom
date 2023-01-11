@@ -38,7 +38,7 @@ $blue:#4C70B5;
     border: 1px solid #4C70B5;
     border-radius: 8px;
     align-items: center;
-    margin: 0 auto;
+    // margin: 0 auto;
     color: $blue;
     transition: all .3s;
     text-align: center;
@@ -55,13 +55,14 @@ $blue:#4C70B5;
     border-radius: 8px;
     align-items: center;
     margin: 0 auto;
-    color: $accent;
+    color: #fff;
     transition: all .3s;
     text-align: center;
+    background-color: $accent;
 
     &:hover {
-        color: #fff;
-        background-color: $accent;
+        color: $accent;
+        background-color: #fff;
     }
 }
 
