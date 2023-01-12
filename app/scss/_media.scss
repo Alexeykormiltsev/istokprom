@@ -323,6 +323,7 @@
                 width: 100%;
                 text-align: center;
                 transition: all .5s;
+                z-index: 10;
             }
 
             &__box-text {
@@ -332,9 +333,14 @@
             &__list {
                 flex-direction: column;
                 align-items: center;
-                z-index: 5;
                 background-color: #E5E5E5;
+                height: 300px;
+                padding: 20px 0;
+            }
 
+            &__list-link {
+                font-size: 18px;
+                line-height: 48px;
             }
 
             .menu__box--active {
@@ -343,10 +349,6 @@
 
             .menu__list-item+.menu__list-item {
                 margin-left: 0;
-            }
-
-            &__list-item {
-                margin-bottom: 16px;
             }
         }
 
@@ -381,12 +383,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
 
-
-            .linkbox__link {
-                width: 100%;
-                margin: 12px;
-            }
+        .linkbox__link {
+            width: 100%;
+            margin: 12px;
         }
     }
 

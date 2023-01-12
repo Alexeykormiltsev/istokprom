@@ -1,0 +1,108 @@
+.about {
+    margin-top: 80px;
+    padding: 40px 0 80px;
+    background: linear-gradient(to top, $blue 50%, #F5F9FF 50%);
+
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        border-radius: 16px;
+        background-color: #fff;
+        margin-bottom: 40px;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: "";
+            top: 24px;
+            right: 24px;
+            width: 88px;
+            height: 88px;
+            background-image: url(../images/about/affter.png);
+        }
+    }
+
+    &__content {
+        padding: 32px;
+    }
+
+    &__img {
+        border-top-right-radius: 16px;
+        border-bottom-right-radius: 16px;
+    }
+
+    &__text-bottom {
+        margin-top: 16px;
+    }
+
+    &__description {
+        color: #fff;
+        @extend %manrope-700;
+        font-size: 19px;
+        line-height: 32px;
+        min-height: 96px;
+    }
+}
+
+@media (max-width:1050px) {
+    .about {
+        &__img {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width:940px) {
+    .about {
+        &__inner {
+            flex-direction: column-reverse;
+        }
+
+        &__img {
+            width: 100%;
+            border-top-left-radius: 16px;
+            border-bottom-right-radius: 0;
+            min-height: 288px;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width:860px) {
+    .about {
+        margin-top: 0;
+    }
+}
+
+@media (max-width:600px) {
+    .about {
+        padding: 20px 0 40px;
+
+        &__inner {
+            &::after {
+                position: absolute;
+                content: "";
+                top: 24px;
+                right: 24px;
+                width: 56px;
+                height: 56px;
+                background-image: url(../images/about/after_mobile.png);
+            }
+        }
+
+        &__content {
+            padding: 20px;
+        }
+
+        &__text {
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &__description {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}

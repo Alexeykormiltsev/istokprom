@@ -5,6 +5,9 @@ $(function () {
   $('.menu__btn').on('click', function () {
     $('.menu__box').toggleClass('menu__box--active');
   });
+  $('.about-link').on('click', function () {
+    $('.about-link').toggleClass('about-link--active');
+  });
 
   const swiper = new Swiper('.header__slider-inner', {
     // Optional parameters
