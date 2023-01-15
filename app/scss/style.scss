@@ -420,7 +420,7 @@
 
     &__slider-img {
         object-fit: contain;
-        width: 35%;
+        width: 28%;
     }
 
     .content {
@@ -463,6 +463,7 @@
         &__link-red {
             color: #fff;
             background-color: $accent;
+            margin-right: 16px;
 
             &:hover {
                 color: $accent;
@@ -932,10 +933,10 @@
         content: "";
         position: absolute;
         width: 244px;
-        height: 244px;
+        height: 90px;
         background-image: url(../images/triangle.png);
         background-repeat: no-repeat;
-        bottom: -154px;
+        bottom: 0;
         right: 50%;
     }
 
