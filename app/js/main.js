@@ -3,8 +3,20 @@
 $(function () {
 
   $('.menu__btn').on('click', function () {
-    $('.menu__box').toggleClass('menu__box--active');
+    $('.header__menu-inner').toggleClass('header__menu-inner--active');
+    $('.menu__btn').toggleClass('menu__btn--active');
+    $('body').toggleClass('hidden');
   });
+  $('#linkone').on('click', function () {
+    $('#linkone').toggleClass('sub-menu__link--icon-active'); 
+    $('.submenu__list').toggleClass('submenu__list--active');  
+  });
+  $('#linktwo').on('click', function () {
+    $('#linktwo').toggleClass('sub-menu__link--icon-active'); 
+    $('.submenu__listtwo').toggleClass('submenu__list--active');  
+  });
+
+
   $('.about-link').on('click', function () {
     $('.about-link').toggleClass('about-link--active');
   });

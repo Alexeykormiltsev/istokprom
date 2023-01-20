@@ -4,6 +4,7 @@
 @import 'global';
 @import 'libs';
 @import 'about';
+@import 'menu';
 
 .header {
     .linkbox-off {
@@ -25,11 +26,21 @@
         justify-content: space-between;
     }
 
+    &__menu-inner {
+        display: flex;
+        justify-content: space-between;
+        width: 1130px;
+    }
+
     .logo {
         display: block;
+        margin-right: 30px;
     }
 
     .menu {
+        .services {
+            position: relative;
+        }
 
         &__btn {
             display: none;
@@ -66,12 +77,22 @@
         &__list {
             display: flex;
             justify-content: space-between;
-
         }
 
-        .menu__list-item+.menu__list-item {
-            margin-left: 24px;
+        &__list-item {
+            position: relative;
+            margin-right: 16px;
         }
+
+        .services {
+            &:hover {
+                .sub-menu {
+                    display: block;
+                }
+            }
+        }
+
+
 
         &__list-link {
             font-size: 14px;
@@ -84,20 +105,21 @@
                 color: $accent;
             }
         }
-        .about-link--active{
-         padding: 4px 8px;
-         border-radius: 4px;
-         background-color: $accent;
-         color:#fff;
-         transition: all .3s;
+
+        .about-link--active {
+            padding: 4px 8px;
+            border-radius: 4px;
+            background-color: $accent;
+            color: #fff;
+            transition: all .3s;
         }
     }
 
     .search {
-        width: 304px;
-        margin: auto 0;
+        margin: auto 40px;
         border: 1px solid #4C70B5;
         border-radius: 4px;
+        width: 280px;
     }
 
     .form {
@@ -108,7 +130,7 @@
         position: relative;
 
         input {
-            border: none;
+            border: 1px solid transparent;
             font: inherit;
             padding: 8px 0;
             width: 100%;
@@ -122,6 +144,7 @@
             &:hover {
                 border: 1px solid #4C70B5;
                 transition: all .3s;
+                border-radius: 4px;
             }
         }
 
@@ -172,7 +195,7 @@
                 margin-top: 4px;
             }
         }
-         
+
 
         &__email {
             position: relative;
@@ -871,6 +894,17 @@
         padding-bottom: 16px;
         padding-left: 12px;
         cursor: pointer;
+
+        &::placeholder {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
+        &:focus::placeholder {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
     }
 
     &__form-checkbox {
@@ -907,7 +941,7 @@
         background-color: $accent;
         border-radius: 8px;
         cursor: pointer;
-        border: none;
+        border: 1px solid transparent;
         font-size: 16px;
         line-height: 20px;
         padding: 14px 40px;
@@ -917,6 +951,7 @@
             color: $accent;
             background-color: #fff;
             border: 1px solid #D44D60;
+             padding: 14px 40px;
         }
     }
 
@@ -1093,7 +1128,7 @@
             background-color: $accent;
             border-radius: 8px;
             cursor: pointer;
-            border: none;
+            border: 1px solid transparent;
             font-size: 16px;
             line-height: 20px;
             padding: 14px 40px;
@@ -1107,5 +1142,11 @@
         }
     }
 }
+
+
+
+
+
+
 
 @import 'media';

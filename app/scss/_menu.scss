@@ -1,0 +1,169 @@
+.sub-menu {
+    width: 1010px;
+    min-height: 100%;
+    background-color: #fff;
+    border-radius: 16px;
+    display: none;
+    position: absolute;
+
+    left: -200px;
+
+    &::after {
+        position: absolute;
+        content: "";
+        bottom: -32px;
+        right: 0;
+        width: 286px;
+        height: 240px;
+        background-image: url(../images/submenu.png);
+        background-repeat: no-repeat;
+    }
+
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 32px;
+        position: relative;
+        flex-wrap: wrap;
+
+    }
+
+    &__list {}
+
+    &__item {
+        margin-bottom: 16px;
+
+        &:hover {
+            .submenu__list {
+                // display: block;
+            }
+        }
+    }
+
+    &__link {
+        color: #202020;
+        font-size: 16px;
+        line-height: 22px;
+        transition: all .3s;
+
+        &:hover {
+            color: $accent;
+        }
+    }
+
+    .submenu__list {
+        // display: none;
+        margin-top: 16px;
+        margin-bottom: 32px;
+
+        li {
+            margin-bottom: 6px;
+        }
+    }
+
+    .submenu__link {
+        @extend %manrope-400;
+        font-size: 14px;
+        line-height: 20px;
+        transition: all .3s;
+        color: #202020;
+
+        &:hover {
+            color: $accent;
+        }
+    }
+}
+
+@media (max-width:1010px) {
+    .sub-menu {
+        width: 860px;
+
+        &::after {
+            bottom: 0;
+            right: 50px;
+        }
+    }
+}
+
+@media (max-width:860px) {
+    .sub-menu {
+        // width: 100%;
+        left: -20px;
+        z-index: 10;
+
+        &::after {
+            display: none;
+        }
+
+        &__wrapper {
+            flex-direction: column;
+            //    width: 100%;
+            padding-bottom: 16px;
+            padding-left: 16px;
+        }
+
+        &__link--icon {
+            padding-right: 80px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 20px;
+                top: 0;
+                right: 0;
+                background-image: url(../images/icons/check-down.png);
+                background-repeat: no-repeat;
+                display: inline-block;
+            }
+        }
+
+        &__link--icontwo {
+            padding-right: 68px;
+        }
+
+        &__list--none,
+        &__item--none {
+            display: none;
+        }
+
+        &__link--icon-active {
+            &::after {
+                transform: rotate(180deg);
+            }
+
+            .submenu__list {
+                display: block;
+            }
+
+            .submenu__list--active {
+                display: none;
+            }
+
+            .submenu__listtwo--active {
+                display: none;
+            }
+        }
+    }
+
+    .submenu__listtwo {
+        display: none;
+    }
+
+    .submenu__list {
+        display: none;
+    }
+
+    .submenu__list--active {
+        display: block;
+    }
+
+    .submenu__listtwo--active {
+        display: block;
+    }
+}
+
+
+@media (max-width:700px) {}
