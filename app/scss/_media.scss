@@ -274,7 +274,7 @@
 
             &__list {
                 flex-direction: column;
-                height: 300px;
+                height: 100%;
                 padding: 20px 0;
             }
 
@@ -294,6 +294,7 @@
             }
             &__list-item{
              margin-left: 16px;
+             margin-bottom: 32px;
             }
         }
 
