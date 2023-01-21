@@ -97,7 +97,7 @@
             }
         }
 
-        .menu__list-link--active {
+        .services-link--active {
             &::after {
                 transform: rotate(180deg);
                 transition: all .4s;

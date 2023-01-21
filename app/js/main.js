@@ -16,8 +16,8 @@ $(function () {
     $('.submenu__listtwo').toggleClass('submenu__list--active');  
   });
 
-  $('.menu__list-link').on('click', function () {
-    $('.menu__list-link').toggleClass('menu__list-link--active');
+  $('#services-link').on('click', function () {
+    $('#services-link').toggleClass('services-link--active');
     $('#services').toggleClass('services--active');
     $('#services').removeClass('services');
   });
