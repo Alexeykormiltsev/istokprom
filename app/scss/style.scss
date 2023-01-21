@@ -85,14 +85,16 @@
         }
 
         .services {
-            &:hover {
-                .sub-menu {
-                    display: block;
-                }
+            .sub-menu {
+                display: none;
             }
         }
 
-
+        .services--active {
+            .sub-menu {
+                display: block;
+            }
+        }
 
         &__list-link {
             font-size: 14px;
@@ -951,7 +953,7 @@
             color: $accent;
             background-color: #fff;
             border: 1px solid #D44D60;
-             padding: 14px 40px;
+            padding: 14px 40px;
         }
     }
 

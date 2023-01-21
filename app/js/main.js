@@ -16,6 +16,12 @@ $(function () {
     $('.submenu__listtwo').toggleClass('submenu__list--active');  
   });
 
+  $('.menu__list-link').on('click', function () {
+    $('.menu__list-link').toggleClass('menu__list-link--active');
+    $('#services').toggleClass('services--active');
+    $('#services').removeClass('services');
+  });
+
 
   $('.about-link').on('click', function () {
     $('.about-link').toggleClass('about-link--active');
