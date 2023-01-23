@@ -5,6 +5,7 @@
 @import 'libs';
 @import 'about';
 @import 'menu';
+@import 'modal';
 
 .header {
     .linkbox-off {
@@ -15,7 +16,7 @@
         width: 100%;
         background-color: #fff;
         position: fixed;
-        top: 0;
+        top: -6px;
         z-index: 10;
         padding: 14px 0;
         box-shadow: 0px 4px 16px rgba(24, 24, 24, 0.08);

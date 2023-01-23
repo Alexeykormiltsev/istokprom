@@ -44,15 +44,15 @@
                                 </p>
                                 <ul class="menu__list">
                                     <li class="menu__list-item">
-                                        <a class="menu__list-link about-link" href="about.html">
+                                        <a class="menu__list-link about-link" href="/about.html">
                                             О компании
                                         </a>
                                     </li>
                                     <li id="services" class="menu__list-item services">
-                                            <a id="services-link" class="menu__list-link" href="#">
-                                                Наши услуги
-                                            </a>
-                                        
+                                        <a id="services-link" class="menu__list-link" href="#">
+                                            Наши услуги
+                                        </a>
+
                                         <div class="sub-menu">
                                             <div class="sub-menu__wrapper">
                                                 <ul class="sub-menu__list">
@@ -358,9 +358,10 @@
                         оставить
                         заявку. Мы свяжемся на следующий день.
                     </p>
-                    <a class="production__item-link production__item-link--blue" href="#">
+                    <button id="myBtn1" class="production__item-link production__item-link--blue">
                         Оставить заявку
-                    </a>
+                    </button>
+                    
                 </div>
                 <div class="production__item">
                     <img class="production__img" src="images/production/3.jpg" alt="production img">
@@ -399,9 +400,10 @@
                                         как шелкография или трансферная печать.
                                     </p>
                                     <div class="content__linkbox">
-                                        <a class="content__link content__link-red" href="#">
+                                        <button id="myBtn2" class="content__link content__link-red">
                                             Заказать
-                                        </a>
+                                        </button>
+                                
                                         <a class="content__link" href="#">
                                             Подробнее
                                         </a>
@@ -1160,9 +1162,46 @@
                         90% клиентов размещают у нас новый заказ
                     </p>
                 </div>
-                <a class="stages__link" href="#">
+                <button id="myBtn3" class="stages__link">
                     Заказать вышивку
-                </a>
+                </button>
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <form id="modal-form" class="comments__form" action="#">
+                            <div class="comments__form-box">
+                                <h2 class="comments__form-title title">
+                                    Закажите вышивку <br>
+                                    в «Студии Исток-Пром»
+                                </h2>
+                                <p class="comments__form-text">
+                                    Оставьте заявку и мы свяжемся с вами в рабочее время <br>
+                                    (c 9.00 до 17.00)
+                                </p>
+                                <label class="comments__form-label">
+                                    <input class="comments__form-input" type="text" placeholder="Имя">
+                                </label>
+                                <label class="comments__form-label">
+                                    <input class="comments__form-input" type="text" placeholder="Телефон">
+                                </label>
+                                <label class="comments__form-label">
+                                    <input class="comments__form-input" type="text" placeholder="E-mail">
+                                </label>
+                                <textarea class="comments__form-textarea" placeholder="Текст сообщения"></textarea>
+                                <label class="comments__form-checkbox">
+                                    <input class="checkbox" type="checkbox">
+                                    Согласен с условиями
+                                    <a class="checkbox-link" href="#">
+                                        пользовательского соглашения
+                                    </a>
+                                </label>
+                                <button class="comments__form-btn" type="submit">
+                                    Оставить заявку
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -1235,10 +1274,10 @@
                         <h4 class="client__content-title">
                             Стать нашим клиентом
                         </h4>
-                        <a class="client__link" href="#">
+                        <button id="myBtn4" class="client__link">
                             Оставить заявку
-                        </a>
-                    </div>
+                        </button>
+                    </div> 
                     <img class="client__img" src="images/client/6.png" alt="client img">
                 </div>
             </div>

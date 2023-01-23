@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="myBtn">Открыть окно</button>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="modal-form" class="comments__form" action="#">
+                <div class="comments__form-box">
+                    <h2 class="comments__form-title title">
+                        Закажите вышивку <br>
+                        в «Студии Исток-Пром»
+                    </h2>
+                    <p class="comments__form-text">
+                        Оставьте заявку и мы свяжемся с вами в рабочее время <br>
+                        (c 9.00 до 17.00)
+                    </p>
+                    <label class="comments__form-label">
+                        <input class="comments__form-input" type="text" placeholder="Имя">
+                    </label>
+                    <label class="comments__form-label">
+                        <input class="comments__form-input" type="text" placeholder="Телефон">
+                    </label>
+                    <label class="comments__form-label">
+                        <input class="comments__form-input" type="text" placeholder="E-mail">
+                    </label>
+                    <textarea class="comments__form-textarea" placeholder="Текст сообщения"></textarea>
+                    <label class="comments__form-checkbox">
+                        <input class="checkbox" type="checkbox">
+                        Согласен с условиями
+                        <a class="checkbox-link" href="#">
+                            пользовательского соглашения
+                        </a>
+                    </label>
+                    <button class="comments__form-btn" type="submit">
+                        Оставить заявку
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/main.min.js"></script>
+</body>
+</html>
