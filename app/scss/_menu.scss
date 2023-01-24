@@ -62,6 +62,20 @@
     }
 }
 
+#services {
+    .services-link--active {
+        padding: 4px 8px;
+        border-radius: 4px;
+        background-color: $accent;
+        color: #fff;
+        transition: all .3s;
+
+        &:hover {
+            background-color: $blue;
+        }
+    }
+}
+
 @media (max-width:1010px) {
     .sub-menu {
         width: 860px;
@@ -102,6 +116,7 @@
                 transform: rotate(180deg);
                 transition: all .4s;
             }
+
         }
     }
 

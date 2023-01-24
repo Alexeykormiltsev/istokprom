@@ -3,7 +3,6 @@
     padding: 40px 0 80px;
     background: linear-gradient(to top, $blue 50%, #F5F9FF 50%);
 
-
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -42,6 +41,17 @@
         font-size: 19px;
         line-height: 32px;
         min-height: 96px;
+    }
+}
+
+#about {
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: $accent;
+    color: #fff;
+    transition: all .3s;
+    &:hover{
+     background-color: $blue;
     }
 }
 

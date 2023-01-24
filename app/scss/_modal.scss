@@ -182,3 +182,33 @@
         }
     }
 }
+@media (max-width:600px) (
+   #modal-form {
+    padding: 14px 28px;
+      .comments__form-title {
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 10px;
+        }
+           .comments__form-text {
+            margin-bottom: 10px;
+        }
+
+        .comments__form-label {
+            margin-bottom: 10px;
+        }
+         .comments__form-input {
+            padding: 10px;
+        }
+
+        .comments__form-textarea {
+            margin-bottom: 10px;
+            height: 80px;
+            padding-top: 10px;
+        }
+
+        .comments__form-checkbox {
+            margin-bottom: 12px;
+        }
+   }
+)
