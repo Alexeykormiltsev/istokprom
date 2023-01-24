@@ -30,7 +30,7 @@ function scripts() {
         'node_modules/swiper/swiper-bundle.js',
         'node_modules/jquery/dist/jquery.js',
         'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
-        'app/js/main.js'
+        'app/js/main.js',
     ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())

@@ -26,6 +26,12 @@ $(function () {
   $('.about-link').on('click', function () {
     $('.about-link').toggleClass('about-link--active');
   });
+  $('.myBtn').on('click', function () {
+    $('body').toggleClass('hidden');
+  });
+  $('.close,.modal').on('click', function () {
+    $('body').removeClass('hidden');
+  });
 
   const swiper = new Swiper('.header__slider-inner', {
     // Optional parameters
@@ -61,7 +67,6 @@ $(function () {
       nextEl: '.next',
       prevEl: '.prev',
     },
-
 
   });
 
@@ -106,42 +111,38 @@ $(function () {
   });
 
 });
+
 var modal = document.getElementById("myModal");
 
+var btn = document.getElementsByClassName("myBtn");
 
-var btn1 = document.getElementById("myBtn1");
-var btn2 = document.getElementById("myBtn2");
-var btn3 = document.getElementById("myBtn3");
-var btn4 = document.getElementById("myBtn4");
+var span = document.getElementsByClassName("close");
 
-
-
-var span = document.getElementsByClassName("close")[0];
-
-
-btn1.onclick = function() {
-    modal.style.display = "block";
-}
-btn2.onclick = function() {
-  modal.style.display = "block";
-}
-btn3.onclick = function() {
-  modal.style.display = "block";
-}
-btn4.onclick = function() {
-  modal.style.display = "block";
+function buttonClick(event) {
+  var id = this.getAttribute('data-modal');
+   var modal = document.getElementById(id);
+   modal.style.display = 'block';
 }
 
-
-span.onclick = function() {
-    modal.style.display = "none";
+for (var i = 0; i < btn.length; i++) {
+   btn[i].onclick = buttonClick;
 }
 
+function spanClick() {
+  var id = this.getAttribute('data-modal');
+  var modal = document.getElementById(id);
+  modal.style.display = 'none';
+}
+
+for (var i = 0; i < span.length; i++) {
+  span[i].onclick = spanClick;
+}
 
 window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
+  var isModal = (' ' + event.target.className + ' ').indexOf(' modal ') > -1;
+  if (isModal) {
+    event.target.style.display = "none";
+  }
 }
 
 

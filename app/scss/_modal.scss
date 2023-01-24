@@ -8,11 +8,8 @@
 //     cursor: pointer;
 //     width: 180px;
 // }
-#myBtn1,
-#myBtn2,
-#myBtn3,
-#myBtn4,
-#myBtn5{
+
+.myBtn {
     cursor: pointer;
     font-size: 16px;
     line-height: 20px;
@@ -66,6 +63,7 @@
     border: 1px solid #fff;
     border-radius: 100%;
     padding: 3px;
+    display: block;
 }
 
 .close:hover,
@@ -137,14 +135,50 @@
         line-height: 40px;
     }
 }
-@media (max-width:860px){
- .modal-content{
-  width: 80%;
- }
- #modal-form{
-   .comments__form-title {
-        font-size: 28px;
-       
+
+@media (max-width:860px) {
+    .modal-content {
+        width: 80%;
     }
- }
+
+    #modal-form {
+        .comments__form-title {
+            font-size: 28px;
+
+        }
+    }
+}
+
+@media (max-width:680px) {
+
+    #modal-form {
+        padding: 16px 32px;
+
+        .comments__form-title {
+            font-size: 26px;
+            line-height: 36px;
+            margin-bottom: 12px;
+        }
+
+        .comments__form-text {
+            margin-bottom: 12px;
+        }
+
+        .comments__form-label {
+            margin-bottom: 12px;
+        }
+         .comments__form-input {
+            padding: 10px;
+        }
+
+        .comments__form-textarea {
+            margin-bottom: 12px;
+            height: 90px;
+            padding-top: 10px;
+        }
+
+        .comments__form-checkbox {
+            margin-bottom: 16px;
+        }
+    }
 }
