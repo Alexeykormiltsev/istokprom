@@ -50,8 +50,166 @@
     background-color: $accent;
     color: #fff;
     transition: all .3s;
-    &:hover{
-     background-color: $blue;
+
+    &:hover {
+        background-color: $blue;
+    }
+}
+
+.evolution {
+    padding: 80px 0;
+    background-color: #fff;
+
+    &__wrapper {
+        background-color: #F5F9FF;
+        border-radius: 16px;
+        padding: 32px 40px;
+        display: flex;
+    }
+
+    &__info {
+        margin: 35px 80px 35px 0;
+        width: 50%;
+    }
+
+    &__info-title {
+        @extend %manrope-400;
+        font-size: 32px;
+        line-height: 40px;
+        color: $blue;
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 40px;
+    }
+
+    &__text-two,
+    &__text-three,
+    &__text-four {
+        display: none;
+    }
+
+    .text-open {
+        position: relative;
+        margin-bottom: 40px;
+        padding: 0;
+        animation-name: animatext;
+        animation-duration: 0.5s
+    }
+
+    @keyframes animatext {
+        from {
+            right: -300px;
+            opacity: 0
+        }
+
+        to {
+            right: 0;
+            opacity: 1
+        }
+    }
+    .text-open{
+     .evolution__text-one,
+     .evolution__text{
+         display: none;
+        }
+    }
+
+    .timeline {
+        &__list {
+            display: flex;
+            position: relative;
+            width: 480px;
+        }
+
+        &__list:before {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 100%;
+            top: 16px;
+            border-bottom: 2px solid #c2c2c2;
+        }
+
+        &__list:after {
+            position: absolute;
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 12px solid #c2c2c2;
+            left: 480px;
+            top: 10px;
+        }
+
+        &__year {
+            padding-top: 40px;
+            position: relative;
+            display: block;
+            font-size: 16px;
+            line-height: 20px;
+            color: #000;
+        }
+
+        &__year:before {
+            position: absolute;
+            content: "";
+            width: 32px;
+            height: 32px;
+            border: 2px solid #c2c2c2;
+            border-radius: 50px;
+            top: 0;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+
+
+        &__year:hover:before {
+            border: 2px solid #4c70b5;
+        }
+
+        &__year-one {
+            margin-right: 86px
+        }
+
+        .year:before {
+            background-color: #4c70b5;
+            border-color: transparent;
+        }
+
+        &__year-two {
+            margin-right: 78px
+        }
+
+        &__year-three {
+            margin-right: 130px;
+        }
+
+        .two-open,
+        .three-open,
+        .four-open {
+            &:before {
+                background-color: #4c70b5;
+                border-color: transparent;
+            }
+        }
+    }
+
+    &__video {
+        width: 600px;
+        border-radius: 16px;
+        background-image: url("../images/example/video-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 

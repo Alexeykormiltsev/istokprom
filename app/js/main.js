@@ -33,6 +33,35 @@ $(function () {
     $('body').removeClass('hidden');
   });
 
+  $('.timeline__year-one').on('click', function () {
+    $('.timeline__year-one').toggleClass('two-open');
+    $('.timeline__year-three').removeClass('three-open');
+    $('.timeline__year-four').removeClass('four-open');
+    $('.timeline__year-two').removeClass('year');
+  });
+
+  $('.timeline__year-two').on('click', function () {
+    $('.timeline__year-two').toggleClass('two-open');
+    $('.timeline__year-three').removeClass('three-open');
+    $('.timeline__year-four').removeClass('four-open');
+    $('.timeline__year-one').removeClass('year');
+  });
+
+  $('.timeline__year-three').on('click', function () {
+    $('.timeline__year-three').toggleClass('three-open');
+    $('.timeline__year-two').removeClass('two-open');
+    $('.timeline__year-four').removeClass('four-open');
+    $('.timeline__year-one').removeClass('year');
+    $('.evolution__text-three').toggleClass('text-open');
+  });
+
+  $('.timeline__year-four').on('click', function () {
+    $('.timeline__year-four').toggleClass('four-open');
+    $('.timeline__year-three').removeClass('three-open');
+    $('.timeline__year-two').removeClass('two-open');
+    $('.timeline__year-one').removeClass('year');
+  });
+
   const swiper = new Swiper('.header__slider-inner', {
     // Optional parameters
     direction: 'horizontal',
