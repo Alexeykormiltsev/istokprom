@@ -34,10 +34,10 @@ $(function () {
   });
 
   $('.timeline__year-one').on('click', function () {
-    $('.timeline__year-one').toggleClass('two-open');
+    $('.timeline__year-one').toggleClass('year');
     $('.timeline__year-three').removeClass('three-open');
     $('.timeline__year-four').removeClass('four-open');
-    $('.timeline__year-two').removeClass('year');
+    $('.timeline__year-two').removeClass('two-open');
   });
 
   $('.timeline__year-two').on('click', function () {
@@ -52,7 +52,6 @@ $(function () {
     $('.timeline__year-two').removeClass('two-open');
     $('.timeline__year-four').removeClass('four-open');
     $('.timeline__year-one').removeClass('year');
-    $('.evolution__text-three').toggleClass('text-open');
   });
 
   $('.timeline__year-four').on('click', function () {
