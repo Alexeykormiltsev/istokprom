@@ -22,6 +22,7 @@
     "-": "^0.0.1",
     "@fancyapps/ui": "^4.0.31",
     "browser-sync": "^2.27.7",
-    "swiper": "^8.4.5"
+    "swiper": "^8.4.5",
+    "vanilla-tilt": "^1.8.0"
   }
 }

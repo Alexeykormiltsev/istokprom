@@ -29,6 +29,7 @@ function scripts() {
     return src([
         'node_modules/swiper/swiper-bundle.js',
         'node_modules/jquery/dist/jquery.js',
+        'node_modules/vanilla-tilt/dist/vanilla-tilt.js',
         'node_modules/@fancyapps/ui/dist/fancybox.umd.js',
         'app/js/main.js',
     ])

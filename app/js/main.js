@@ -37,7 +37,17 @@ $(function () {
     $('.timeline__year-one').toggleClass('year');
     $('.timeline__year-three').removeClass('three-open');
     $('.timeline__year-four').removeClass('four-open');
-    $('.timeline__year-two').removeClass('two-open');
+    $('.timeline__year-two').removeClass('two-open'); 
+    $('#text1').toggleClass('text-open');
+    $('#text1').removeClass('close');
+    $('#text2').removeClass('text-open');
+    $('#text3').removeClass('text-open');
+    $('#text4').removeClass('text-open');
+    
+    
+    $('#text4').toggleClass('close');
+    $('#text3').toggleClass('close');
+    $('#text2').toggleClass('close');
   });
 
   $('.timeline__year-two').on('click', function () {
@@ -45,6 +55,15 @@ $(function () {
     $('.timeline__year-three').removeClass('three-open');
     $('.timeline__year-four').removeClass('four-open');
     $('.timeline__year-one').removeClass('year');
+    $('#text2').toggleClass('text-open');
+    $('#text2').removeClass('close');
+    $('#text1').removeClass('text-open');
+    $('#text3').removeClass('text-open');
+    $('#text4').removeClass('text-open');
+
+    // $('#text4').toggleClass('close');
+    // $('#text3').toggleClass('close');
+    $('#text1').toggleClass('close');
   });
 
   $('.timeline__year-three').on('click', function () {
@@ -52,6 +71,15 @@ $(function () {
     $('.timeline__year-two').removeClass('two-open');
     $('.timeline__year-four').removeClass('four-open');
     $('.timeline__year-one').removeClass('year');
+    $('#text3').toggleClass('text-open');
+    $('#text3').removeClass('close');
+    $('#text2').removeClass('text-open');
+    $('#text1').removeClass('text-open');
+    $('#text4').removeClass('text-open');
+
+    $('#text2').toggleClass('close');
+    // $('#text4').toggleClass('close');
+    // $('#text1').toggleClass('close');
   });
 
   $('.timeline__year-four').on('click', function () {
@@ -59,6 +87,15 @@ $(function () {
     $('.timeline__year-three').removeClass('three-open');
     $('.timeline__year-two').removeClass('two-open');
     $('.timeline__year-one').removeClass('year');
+    $('#text4').toggleClass('text-open');
+    $('#text4').removeClass('close');
+    $('#text2').removeClass('text-open');
+    $('#text3').removeClass('text-open');
+    $('#text1').removeClass('text-open');
+
+    // $('#text2').toggleClass('close');
+    $('#text3').toggleClass('close');
+    // $('#text1').toggleClass('close');
   });
 
   const swiper = new Swiper('.header__slider-inner', {
@@ -74,7 +111,7 @@ $(function () {
     },
 
   });
-  const slider = new Swiper('.product__slider, .example__slider', {
+  const slider = new Swiper('.product__slider, .example__slider, .machine__slider', {
 
     effect: 'cube',
     cubeEffect: {
