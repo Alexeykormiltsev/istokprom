@@ -288,13 +288,15 @@
                 flex-direction: column-reverse;
                 text-align: left;
             }
-            &__box-text{
-             margin-left: 16px;
-             margin-bottom: 24px;
+
+            &__box-text {
+                margin-left: 16px;
+                margin-bottom: 24px;
             }
-            &__list-item{
-             margin-left: 16px;
-             margin-bottom: 32px;
+
+            &__list-item {
+                margin-left: 16px;
+                margin-bottom: 32px;
             }
         }
 
@@ -381,19 +383,21 @@
         &__menu-inner--active {
             transform: translateY(0);
         }
-        .search{
-         display: block;
-         margin: 0 16px 24px;
-         min-width: 288px;
-         width: auto;
+
+        .search {
+            display: block;
+            margin: 0 16px 24px;
+            min-width: 288px;
+            width: auto;
         }
 
         .contacts {
             margin-left: 16px;
             margin-bottom: 24px;
             flex-direction: column;
-            &__phone{
-             margin-bottom: 24px;
+
+            &__phone {
+                margin-bottom: 24px;
             }
         }
 
@@ -480,7 +484,8 @@
     .product,
     .example,
     .comments,
-    .customers {
+    .customers,
+    .machine {
         .prev {
             left: -15px;
             padding: 16px;
@@ -905,7 +910,8 @@
     .product,
     .example,
     .comments,
-    .customers {
+    .customers,
+    .machine {
         .swiper-pagination-bullet {
             width: 12px;
             height: 12px;

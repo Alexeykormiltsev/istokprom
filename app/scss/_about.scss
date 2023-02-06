@@ -209,6 +209,7 @@
 .machine {
     padding-bottom: 100px;
     @extend %slider;
+    background: linear-gradient(to top, #F5F9FF 60%, #fff 40%);
 
     .swiper {
         width: 100%;
@@ -219,6 +220,7 @@
     &__slider-item {
         display: flex;
         border-radius: 16px;
+        background-color: #fff;
     }
 
     &__slider-img {
@@ -237,17 +239,45 @@
         @extend %manrope-700;
         margin-bottom: 20px;
     }
-    &__slider-text{
-     margin-bottom: 16px;
+
+    &__slider-text {
+        margin-bottom: 16px;
     }
-    &__slider-link{
-     color: $accent;
-     border-bottom: 1px solid $accent;
-     transition: all .4s;
-     &:hover{
-      color: $blue;
-      border-bottom: 1px solid $blue;
-     }
+
+    &__slider-link {
+        color: $accent;
+        border-bottom: 1px solid $accent;
+        transition: all .4s;
+
+        &:hover {
+            color: $blue;
+            border-bottom: 1px solid $blue;
+        }
+    }
+}
+
+.orders {
+    background-color: #F5F9FF;
+    padding-bottom: 80px;
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 32px;
+    }
+
+    &__cart {
+        padding: 24px 24px !important;
+    }
+
+    &__process {
+        line-height: 20px;
+        margin: auto 0;
+    }
+
+    &__link {
+        margin: 32px auto 0;
+        display: block;
     }
 }
 
@@ -255,6 +285,27 @@
     .about {
         &__img {
             width: 50%;
+        }
+    }
+
+    .machine {
+        &__slider-img {
+            width: 40%;
+            object-fit: cover;
+        }
+    }
+
+    .orders {
+        &__inner {
+            grid-gap: 20px;
+        }
+    }
+}
+
+@media (max-width:1020px) {
+    .orders {
+        &__inner {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }
@@ -361,7 +412,6 @@
                     left: 10px;
                     top: -15px;
                 }
-
             }
 
             &__year {
@@ -392,6 +442,31 @@
                 top: 0;
                 opacity: 1;
             }
+        }
+    }
+
+    .machine {
+        &__slider-item {
+            flex-direction: column;
+        }
+
+        &__slider-img {
+            width: 100%;
+            min-height: 210px;
+            height: 380px;
+            border-top-right-radius: 16px;
+            border-bottom-left-radius: 0;
+        }
+
+        &__slider-title {
+            font-size: 22px;
+            line-height: 30px;
+        }
+    }
+
+    .orders {
+        &__inner {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 }
@@ -444,6 +519,20 @@
             line-height: 20px;
         }
     }
+
+    .machine {
+        &__slider-img {
+            height: auto;
+        }
+    }
+
+    .orders {
+        &__inner {
+            grid-template-columns: repeat(1, 1fr);
+            grid-gap: 16px;
+        }
+    }
+
 }
 
 @media (max-width:480px) {
@@ -455,7 +544,6 @@
                     right: -41px;
                     width: 251%;
                 }
-
             }
 
             &__year {
