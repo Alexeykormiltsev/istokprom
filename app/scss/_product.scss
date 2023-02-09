@@ -18,6 +18,7 @@
 
     &__item--descr {
         width: 320px;
+         margin-left: 16px;
     }
 
     &__item--title {
@@ -61,16 +62,24 @@
 
 @media (max-width: 460px) {
     .product-list {
+        &__inner {
+            grid-gap: 16px;
+        }
+
         &__item--text {
             font-size: 12px;
             line-height: 20px;
         }
-        &__item--descr{
-         width: 50%;
+
+        &__item--descr {
+            width: 50%;
+            margin-top: 16px;
+            margin-bottom: 16px;
         }
-         &__item--img {
-        width: 50%;
-        object-fit: contain;
-    }
+
+        &__item--img {
+            width: 50%;
+            object-fit: contain;
+        }
     }
 }
