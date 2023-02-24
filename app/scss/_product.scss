@@ -78,8 +78,9 @@
         }
 
         &__item--img {
-            width: 50%;
+            width: 100%;
             object-fit: contain;
+            margin-left: 12px;
         }
     }
 }
